@@ -5,4 +5,24 @@
     android:orientation="vertical"
     android:padding="17dp">
 
+    <TextView
+        android:id="@+id/TextViewReport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Relatorio de Usuario"
+        android:textSize="18sp"
+        />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:onClick="voltarParaCadastro"
+        />
+
+
+
     </LinearLayout>
