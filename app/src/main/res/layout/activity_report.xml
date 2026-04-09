@@ -6,7 +6,7 @@
     android:padding="17dp">
 
     <TextView
-        android:id="@+id/TextViewReport"
+        android:id="@+id/textViewReport"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Relatorio de Usuario"
