@@ -6,8 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
-import androidx.room.ROOM;
-
+import androidx.room.Room;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;
@@ -26,7 +25,7 @@ public class ReportActivity extends AppCompatActivity {
         textViewReport = findViewById(R.id.textViewReport);
         //Encontra o botão e define o clique para voltar
         Button btnVoltar = findViewById(R.id.btnVoltar);
-        //O botão de retorno utilizandi expressão lambda
+        //O botão de retorno utilizando expressão lambda
         btnVoltar.setOnClickListener(v -> voltarParaCadastro());
 
         /*
@@ -36,7 +35,7 @@ public class ReportActivity extends AppCompatActivity {
            Por padrão, ROOM pribe isso. O correto seria fazer consultas em threads separadas.
         */
 
-        UserDatabase db = ROOM.databaseBuilder(getApplication(), UserDatabase.class, "User-database").allowMainThreadQueries().build();
+        UserDatabase db = Room.databaseBuilder(getApplication(), UserDatabase.class, "user-database").allowMainThreadQueries().build();
 
         //Obtem o objeto DAO(Data Access Object que contem as queries SQL
         UserDao userDao = db.userDao();
