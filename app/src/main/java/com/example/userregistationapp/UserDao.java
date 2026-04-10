@@ -17,7 +17,7 @@ public interface UserDao {
     //A anotação @Insert infroma a Room que este metodo deve ser usado para inserir dado
 
     @Insert
-    void inserir(User user);
+    void insert(User user);
 
     //Metodo para buscar todos usuarios cadastrados no BD
     //A anotação @Query permite definir uma consulta SQL personalizada
